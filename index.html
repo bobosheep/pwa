@@ -30,7 +30,7 @@
             <section class="hero is-primary">
                 <div class="hero-body">
                 <p class="title">
-                    Forbes list of billionaires
+                    Forbes list of billionaires 2022
                 </p>
                 <p class="subtitle">
                     An example of pwa web 
@@ -90,7 +90,7 @@
             data: {
                 items: [{ 
                     name: 'Elon Reeve Musk',
-                    newWorth: 12219,
+                    newWorth: 219,
                     age: 50,
                     country: 'United States',
                     sourceOfWealth: ['Tesla', 'SpaceX'],
@@ -164,8 +164,10 @@
     </script>
     <script text="javascript">
         if('serviceWorker' in navigator) {   // Check if browser suupport serviceWorker
-            navigator.serviceWorker.register('/sw.js').then(() => {  
+            navigator.serviceWorker.register('/sw.js').then((reg) => {  
                 console.log('Service worker registered!');
+                reg.update();
+                console.log('Service worker updated!');
             });
         }
     </script>
