@@ -1,4 +1,4 @@
-const staticCacheName = 'cache-ver0.0.1'
+const staticCacheName = 'cache-ver0.0.2'
 const prefetchFiles = [
     '/',
     '/index.html',
