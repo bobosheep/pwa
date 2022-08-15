@@ -8,21 +8,6 @@
         <!-- PWA -->
         <meta name="theme-color" content="#00d1b2"/>
         <link rel="manifest" href="manifest.json">
-                
-        <!-- Apple Safari -->
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="apple-mobile-web-app-title" content="WebApp - First App">
-        <link rel="apple-touch-icon" href="./assets/images/android_057.png" sizes="57x57">
-        <link rel="apple-touch-icon" href="./assets/images/android_060.png" sizes="60x60">
-        <link rel="apple-touch-icon" href="./assets/images/android_072.png" sizes="72x72">
-        <link rel="apple-touch-icon" href="./assets/images/android_076.png" sizes="76x76">
-        <link rel="apple-touch-icon" href="./assets/images/android_114.png" sizes="114x114">
-        <link rel="apple-touch-icon" href="./assets/images/android_120.png" sizes="120x120">
-        <link rel="apple-touch-icon" href="./assets/images/android_144.png" sizes="144x144">
-        <link rel="apple-touch-icon" href="./assets/images/android_152.png" sizes="152x152">
-        <link rel="apple-touch-icon" href="./assets/images/android_167.png" sizes="167x167">
-        <link rel="apple-touch-icon" href="./assets/images/android_180.png" sizes="180x180">
     </head>
 
     <body>
@@ -32,8 +17,11 @@
                 <p class="title">
                     Forbes list of billionaires 2022
                 </p>
-                <p class="subtitle">
-                    An example of pwa web 
+                <p class="subtitle content">
+                    An example of pwa web, data from 
+                    <a href="https://www.forbes.com/real-time-billionaires/#f823ef83d788">
+                       Forbes web
+                    </a> 
                 </p>
                 </div>
             </section>
@@ -43,11 +31,6 @@
                 <div class="container" v-for="item in items">
 
                     <div class="card">
-                        <!-- <div class="card-image">
-                            <figure class="image">
-                                <img :src="item.img" :alt="item.name + ' image '">
-                            </figure>
-                        </div> -->
                         <div class="card-content">
                             <div class="media">
                                 <div class="media-left">
@@ -63,7 +46,7 @@
     
                             <div class="content">
                                 <ul>
-                                    <li>資產淨值: {{ item.newWorth }}</li>
+                                    <li>資產淨值: ${{ item.newWorth }}B</li>
                                     <li>國家: {{ item.country }}</li>
                                     <li>財富來源: 
                                         <span v-for="(source, index) in item.sourceOfWealth">
@@ -90,71 +73,71 @@
             data: {
                 items: [{ 
                     name: 'Elon Reeve Musk',
-                    newWorth: 219,
-                    age: 50,
+                    newWorth: 265.7,
+                    age: 51,
                     country: 'United States',
                     sourceOfWealth: ['Tesla', 'SpaceX'],
                     img: '/imgs/Elon_Musk.jpg'
                 }, {
-                    name: 'Jeff Bezos',
-                    newWorth: 177,
-                    age: 58,
-                    country: 'United States',
-                    sourceOfWealth: ['Amazon'],
-                    img: 'https://m.media-amazon.com/images/M/MV5BYTNlOGZhYzgtMmE3OC00Y2NiLWFhNWQtNzg5MjRhNTJhZGVmXkEyXkFqcGdeQXVyNzg5MzIyOA@@._V1_UY317_CR5,0,214,317_AL_.jpg'
-                }, {
                     name: 'Bernard Arnault & family',
-                    newWorth: 158,
+                    newWorth: 172.4,
                     age: 73,
                     country: 'France',
                     sourceOfWealth: ['LVMH'],
                     img: 'https://cdn.britannica.com/09/225009-050-9BA6E880/French-businessman-Bernard-Arnault-2017.jpg'
                 }, {
+                    name: 'Jeff Bezos',
+                    newWorth: 168,
+                    age: 58,
+                    country: 'United States',
+                    sourceOfWealth: ['Amazon'],
+                    img: 'https://m.media-amazon.com/images/M/MV5BYTNlOGZhYzgtMmE3OC00Y2NiLWFhNWQtNzg5MjRhNTJhZGVmXkEyXkFqcGdeQXVyNzg5MzIyOA@@._V1_UY317_CR5,0,214,317_AL_.jpg'
+                }, {
+                    name: 'Gautam Adani & family',
+                    newWorth: 131.1,
+                    age: 60,
+                    country: 'India',
+                    sourceOfWealth: ['infrastructure', 'commodities'],
+                    img: 'https://upload.wikimedia.org/wikipedia/commons/f/ff/Gautam_Adani.jpg'
+                }, {
                     name: 'Bill Gates',
-                    newWorth: 129,
+                    newWorth: 114.3,
                     age: 66,
                     country: 'United States',
                     sourceOfWealth: ['Microsoft'],
                     img: 'https://cdn.britannica.com/47/188747-050-1D34E743/Bill-Gates-2011.jpg'
                 }, {
+                    name: 'Larry Ellison',
+                    newWorth: 109.2,
+                    age: 77 ,
+                    country: 'United States',
+                    sourceOfWealth: ['Oracle Corporation'],
+                    img: 'https://imageio.forbes.com/specials-images/imageserve/5e8b62cfc095010007bffea0/0x0.jpg?format=jpg&crop=4529,4532,x0,y652,safe&height=416&width=416&fit=bounds'
+                }, {
                     name: 'Warren Buffett',
-                    newWorth: 118,
+                    newWorth: 104.6,
                     age: 91,
                     country: 'United States',
                     sourceOfWealth: ['Berkshire Hathaway'],
                     img: 'https://imageio.forbes.com/specials-images/imageserve/5babb7f1a7ea4342a948b79a/0x0.jpg?format=jpg&crop=2327,2329,x748,y1753,safe&height=416&width=416&fit=bounds'
                 }, {
                     name: 'Larry Page',
-                    newWorth: 111,
+                    newWorth: 103.6,
                     age: 49,
                     country: 'United States',
                     sourceOfWealth: ['Alphabet Inc.'],
                     img: 'https://assets-us-01.kc-usercontent.com/5cb25086-82d2-4c89-94f0-8450813a0fd3/0d94050c-01cf-4eae-a1ba-62275cf8ee12/Larry_Page.jpg?fm=jpg&auto=format'
                 }, {
                     name: 'Sergey Brin',
-                    newWorth: 107,
+                    newWorth: 100.4,
                     age: 48,
                     country: 'United States',
                     sourceOfWealth: ['Alphabet Inc.'],
                     img: 'https://imageio.forbes.com/specials-images/imageserve/5c7d7c254bbe6f78090d831f/0x0.jpg?format=jpg&crop=2412,2414,x475,y168,safe&height=416&width=416&fit=bounds'
                 }, {
-                    name: 'Larry Ellison',
-                    newWorth: 106,
-                    age: 77,
-                    country: 'United States',
-                    sourceOfWealth: ['Oracle Corporation'],
-                    img: 'https://imageio.forbes.com/specials-images/imageserve/5e8b62cfc095010007bffea0/0x0.jpg?format=jpg&crop=4529,4532,x0,y652,safe&height=416&width=416&fit=bounds'
-                }, {
-                    name: 'Steve Ballmer',
-                    newWorth: 91.4,
-                    age: 66,
-                    country: 'United States',
-                    sourceOfWealth: ['Microsoft'],
-                    img: 'https://imageio.forbes.com/specials-images/imageserve/59d50c47a7ea436b47b36d66/0x0.jpg?format=jpg&crop=2387,2386,x553,y322,safe&height=416&width=416&fit=bounds'
-                }, {
                     name: 'Mukesh Ambani',
-                    newWorth: 90.7,
-                    age: 64,
+                    newWorth: 95.6,
+                    age: 65,
                     country: 'India',
                     sourceOfWealth: ['Reliance Industries'],
                     img: 'https://imageio.forbes.com/specials-images/imageserve/5c7d7829a7ea434b351ba0b6/0x0.jpg?format=jpg&crop=1837,1839,x206,y250,safe&height=416&width=416&fit=bounds'
@@ -166,8 +149,6 @@
         if('serviceWorker' in navigator) {   // Check if browser suupport serviceWorker
             navigator.serviceWorker.register('/sw.js').then((reg) => {  
                 console.log('Service worker registered!');
-                reg.update();
-                console.log('Service worker updated!');
             });
         }
     </script>
